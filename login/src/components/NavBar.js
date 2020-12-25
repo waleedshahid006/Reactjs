@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import logo from '../logo.png'
 
-
 const useStyles = makeStyles(theme => ({
     menuButton: {
         color: "black",
@@ -21,8 +20,7 @@ const useStyles = makeStyles(theme => ({
         color: "black",
         backgroundColor: "blue"
     },
-    butt: {
-        
+    butt: { 
         paddingRight:"15px",
         textDecoration:"none",
     }
@@ -33,7 +31,6 @@ const NavBar = () =>  {
     const classes = useStyles();
     return (
         <div >
-            {console.log("SIGNIN")}
             <AppBar position="static" className= {classes.menuButton}>
                 <Toolbar >
                 <Avatar alt="Fogos" src= {logo} className={classes.avat}/>

@@ -49,15 +49,11 @@ const useStyles = makeStyles(theme => ({
 
 const SignIn = () => {
   const [HomeisAuth, HomesetIsAuth] = useState(false);
-  const [UpisAuth, UpsetIsAuth] = useState(false);
 
   const classes = useStyles();
 
   if(HomeisAuth) {
     return <Redirect to='/Home' />
-    }
-  if(UpisAuth) {
-      return <Redirect to='/SignUp'/>
     }
 
       const log = (e) => {
@@ -81,15 +77,8 @@ const SignIn = () => {
         })
       }
       
-      
-      const handle = () => {
-        UpsetIsAuth(true)
-      }
 
     return (
-      <div>
-       { console.log("NAVBAR")}
-     
       <Container component="main" maxWidth="xm">
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
@@ -150,7 +139,6 @@ const SignIn = () => {
           </form>
           </div>
       </Container>
-      </div>
     );
     
   }
