@@ -18,7 +18,6 @@ function App() {
           <Route path = "/SignIn" component= {SignIn} />
           <Route path = "/SignUp" component= {SignUp} />
           <Route path = "/Home" component= {Home} />
-          
           <Route component={ErrorP} />
         </Switch>
         </BrowserRouter>

@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: 'Azure',
-    boxShadow: "0 0  20px blue",
+    boxShadow: "0 0 20px blue",
     padding: "20px 25px",
   },
   avatar: {
@@ -36,20 +36,17 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height:"100%",
     marginTop: theme.spacing(1),
-
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
   li: {
-    display:"flex",
     textDecoration:"none",
-  }
+  },
 }));
 
 const SignIn = () => {
   const [HomeisAuth, HomesetIsAuth] = useState(false);
-
   const classes = useStyles();
 
   if(HomeisAuth) {
@@ -76,7 +73,7 @@ const SignIn = () => {
           console.log(err)
         })
       }
-      
+
 
     return (
       <Container component="main" maxWidth="xm">
@@ -112,6 +109,7 @@ const SignIn = () => {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+
             <Button
               type="submit"
               fullWidth
@@ -140,8 +138,8 @@ const SignIn = () => {
           </div>
       </Container>
     );
-    
   }
+  
   export default SignIn
 
 

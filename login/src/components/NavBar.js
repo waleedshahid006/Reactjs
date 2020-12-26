@@ -5,26 +5,28 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import {Link} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
-import logo from '../logo.png'
+import logo from '../assests/image/logo.png'
 
 const useStyles = makeStyles(theme => ({
     menuButton: {
-        color: "black",
-        backgroundColor: "Azure",
+        backgroundColor: "black",
     },
     title: {
             flexGrow: 1,
             paddingLeft : 100,
+            textDecoration:"none",
+            color:'red',
     },
     avat: {
-        color: "black",
-        backgroundColor: "blue"
+        border:'2px solid red',
     },
     butt: { 
         paddingRight:"15px",
         textDecoration:"none",
-    }
-
+    },
+    typo:{
+        color:"red",
+    },
 }));
 
 const NavBar = () =>  {
@@ -33,17 +35,19 @@ const NavBar = () =>  {
         <div >
             <AppBar position="static" className= {classes.menuButton}>
                 <Toolbar >
-                <Avatar alt="Fogos" src= {logo} className={classes.avat}/>
-                    <Typography variant="h6" className={classes.title} >
-                        RECRUITMENT SYSTEM
+                    <Link to='/Home'><Avatar alt="Fogos" src= {logo} className={classes.avat}/> </Link>
+                    <Link to='/Home' className={classes.title}>
+                    <Typography variant="h6">
+                        CAMPUS RECRUITMENT SYSTEM
                     </Typography>
-                    <Link color="inherit" className={classes.butt} to = '/SignIn'>
-                    <Typography variant="h6" className={classes.link} >
-                        SIGNIN
+                    </Link>
+                    <Link className={classes.butt} to = '/SignIn'>
+                    <Typography variant="h6" className={classes.typo}>
+                        SIGN IN
                     </Typography></Link>
-                    <Link color="inherit"className={classes.butt} to = '/SignUp'>
-                    <Typography variant="h6" className={classes.link} >
-                        SIGNUP
+                    <Link className={classes.butt} to = '/SignUp'>
+                    <Typography variant="h6" className={classes.typo}>
+                        SIGN UP
                     </Typography>
                     </Link>
                 </Toolbar>
