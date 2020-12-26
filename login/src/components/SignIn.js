@@ -131,7 +131,7 @@ const SignIn = () => {
                 </Link>
               </Grid>
               <Grid item>
-                <Link to='/SignUp'>
+                <Link className={classes.li} to='/SignUp'>
                 Don't have an account? Sign Up
                 </Link>
               </Grid>
